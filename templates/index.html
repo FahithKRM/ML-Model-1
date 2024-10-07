@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 class="heading">Semeseter Marks Prediction</h1>
+    <form action="/predict" method="POST">
+        <label for="mid">Mid Semester Marks</label>
+        <input name="mid" type="number" required>
+        <label for="att">Attendence </label>
+        <input name="att" type="number" required>
+        <button type="submit">Predict</button>
+    </form>
+    {% if prediction %}
+        <p>Predicted End Semester Marks : {{prediction}}</p>
+    {% endif %}
+</body>
+</html>
